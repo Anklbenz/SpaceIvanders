@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class GameLoop : IDisposable
 {
+    private const int DEAD_COUNT = 20;
+    private const float INCREASE_STEP = 0.015f;
     public event Action<bool> AllEnemiesDestroyedEvent;
     public readonly StatsHandler StatsHandler;
     public DeadZone DeadZone{ get; }
 
-    private const int DEAD_COUNT = 20;
-
-    private const float INCREASE_STEP = 0.015f;
     private readonly EnemiesHandler _enemiesHandler;
     private readonly BonusSpawner _bonusSpawner;
     private readonly List<Enemy> _enemiesList;

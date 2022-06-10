@@ -10,7 +10,6 @@ public class Motor
     private Vector3 _direction;
 
     public Motor(Transform transform, Rigidbody2D rigidbody, float speed = 1f){
-
         _speed = speed;
         _rigidbody = rigidbody;
         _transform = transform;
@@ -21,7 +20,6 @@ public class Motor
     }
 
     public void Move(){
-        
         _rigidbody.MovePosition(_transform.position + _direction * Time.deltaTime * _speed);
     }
 }
